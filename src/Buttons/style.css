@@ -1,0 +1,32 @@
+.title__bothButtons {
+    align-self: center;
+    justify-self: right;
+}
+
+    @media (max-width: 645px) {
+        .title__bothButtons {
+            justify-self: center;
+        }
+    }
+
+.title__button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: hsl(0, 0%, 35%);
+    font-size: 16px;
+    max-height: 32px;
+}
+
+.title__button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.title__button--disabled {
+    color: #aaa;
+}
+
+.title__button--disabled:hover {
+    color: #aaa;
+    cursor: auto;
+}
