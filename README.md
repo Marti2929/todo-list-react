@@ -7,7 +7,7 @@ This app lets the user create the list of tasks and tick off the done tasks.
 
 To see how it looks check below.
 
-![QuickLook](public/screenshot.PNG)
+![QuickLook](public/screenshot.png)
 
 ## Link
 
