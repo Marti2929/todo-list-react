@@ -19,15 +19,18 @@
     grid-gap: 5px 10px;
 }
 
-.list__button--done {
+.list__button {
     border: none;
-    background-color: hsl(120, 100%, 25%);
     color:rgb(255, 255, 255);
     width: 25px;
     height: 25px;
     align-self: center;
     cursor: pointer;
     transition: background-color 0.4s;
+}
+
+.list__button--done {
+    background-color: hsl(120, 100%, 25%);
 }
 
 .list__button--done:hover {
@@ -35,15 +38,7 @@
 }
 
 .list__button--remove {
-    border: none;
     background-color: hsl(0, 100%, 40%);
-    color:rgb(255, 255, 255);
-    width: 25px;
-    height: 25px;
-    align-self: center;
-    background-image: "🎨";
-    cursor: pointer;
-    transition: background-color 0.4s;
 }
 
 .list__button--remove:hover {

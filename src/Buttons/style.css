@@ -1,15 +1,15 @@
-.title__bothButtons {
+.buttons {
     align-self: center;
     justify-self: right;
 }
 
     @media (max-width: 645px) {
-        .title__bothButtons {
+        .buttons {
             justify-self: center;
         }
     }
 
-.title__button {
+.buttons__button {
     background-color: rgb(255, 255, 255);
     border: none;
     color: hsl(0, 0%, 35%);
@@ -17,16 +17,16 @@
     max-height: 32px;
 }
 
-.title__button:hover {
+.buttons__button:hover {
     color: black;
     cursor: pointer;
 }
 
-.title__button--disabled {
+.buttons__button--disabled {
     color: #aaa;
 }
 
-.title__button--disabled:hover {
+.buttons__button--disabled:hover {
     color: #aaa;
     cursor: auto;
 }

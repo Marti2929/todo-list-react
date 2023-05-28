@@ -2,9 +2,9 @@ import './style.css';
 
 const Section = ({title, headerButtons, body}) => {
     return (          
-    <section>
-        <header className="title__background title__backgroundList">
-            <h2 className="title">{title}</h2>
+    <section className="section">
+        <header className="section__titleBackground">
+            <h2 className="section__title">{title}</h2>
             {headerButtons}
         </header>
         {body}
