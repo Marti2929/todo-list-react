@@ -21,7 +21,6 @@ function App() {
       {
         content: newTask,
         done: false,
-        // id: tasks.length === 0 ? 1 : (tasks.length + 1),
         id: tasks.length === 0 ? 1 : tasks[tasks.length-1].id + 1,
       }])
   }
@@ -39,6 +38,10 @@ function App() {
       return (task.id === id ? { ...task, done: !task.done } :  task) }))
   }
 
+  const removeTask = (id) => {
+    setTasks(tasks => tasks.filter(task => task.id !== id))
+  }
+
   return (
     <Container>      
       <Header title="Lista zadań" />
@@ -52,9 +55,10 @@ function App() {
                               toggleHideDoneTasks={toggleHideDoneTasks}
                               completeAllTasks={completeAllTasks} />}
                    body={
-                     <List tasks={tasks}
-                           hideDoneTasks={hideDoneTasks}
-                           toggleTaskDone={toggleTaskDone} />} />
+                     <List  tasks={tasks}
+                            hideDoneTasks={hideDoneTasks}
+                            toggleTaskDone={toggleTaskDone}
+                            removeTask={removeTask} />} />
     </Container>
   );
 }
