@@ -21,6 +21,8 @@ Please find demo in the link below.
 - Grid
 - ES6+ features
 - React
+- create-react-app
+- Webpack
 
 ## Getting Started with Create React App
 
