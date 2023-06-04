@@ -6,14 +6,14 @@ import Section from './Section';
 import Header from './Header';
 import Container from './Container';
 
-let hideDoneTasks = false;
-
 function App() {
   
   const [tasks, setTasks] = useState([
     {id: 1, content: "zrobić zakupy", done: false},
     {id: 2, content: "kupić prezenty", done: true},
   ]);
+
+  const [hideDoneTasks, setHideDoneTasks] = useState(false);
 
   const addNewTask = (newTask) => {
     setTasks(tasks => [
@@ -22,8 +22,12 @@ function App() {
         content: newTask,
         done: false,
         // id: tasks.length === 0 ? 1 : (tasks.length + 1),
-        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+        id: tasks.length === 0 ? 1 : tasks[tasks.length-1].id + 1,
       }])
+  }
+
+  const toggleHideDoneTasks = () => {
+    setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
   }
 
   return (
@@ -34,7 +38,7 @@ function App() {
                      <Form addNewTask={addNewTask}/>} />      
           <Section title="Lista zadań"
                    headerButtons={
-                    <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />}
+                    <Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} toggleHideDoneTasks={toggleHideDoneTasks} />}
                    body={
                     <List tasks={tasks} hideDoneTasks={hideDoneTasks} />} />
     </Container>
